@@ -1,1 +1,8 @@
-<p>note-input works!</p>
+<ng-container>
+  <textarea
+    class="notepad-textarea no-scroll"
+    placeholder="Write Here..."
+    (input)="textAreaInput($event)"
+    [rows]="textAreaRowsProperty"
+  ></textarea>
+</ng-container>

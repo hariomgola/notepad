@@ -1,0 +1,18 @@
+.notepad-textarea {
+    box-sizing: border-box;
+    display: flexbox;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    resize: none;
+    /* Using this property when click border is geeting highlighest looking bad as per user experiance*/
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+.notepad-textarea:focus :focus {
+    border: 1px solid red;
+}
+
+.no-scroll::-webkit-scrollbar {
+    display: none;
+}
