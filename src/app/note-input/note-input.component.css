@@ -16,3 +16,29 @@
 .no-scroll::-webkit-scrollbar {
     display: none;
 }
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.heading {
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: transparent;
+    background-image: radial-gradient(circle, #553c9a, #ee4b2b);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.header-button {
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 5px;
+    color: white;
+    background-color: #DF2935;
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}

@@ -1,8 +1,16 @@
 <ng-container>
+  <div class="header">
+    <h6 class="heading">Notes Application</h6>
+    <a class="header-button" (click)="openProjectCode()">{{ sourceCode }}</a>
+    <a class="header-button">{{'developer profile'}}</a>
+  </div>
+</ng-container>
+<ng-container>
   <textarea
     class="notepad-textarea no-scroll"
     placeholder="Write Here..."
     (input)="textAreaInput($event)"
     [rows]="textAreaRowsProperty"
-  ></textarea>
+    >{{ inputValue }}</textarea
+  >
 </ng-container>
