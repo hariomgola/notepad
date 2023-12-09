@@ -5,7 +5,7 @@ This project is the simple new implementation of notepad in browser
 - `npm start` or `ng serve`
 
 ## Running and viewing project
-Project is up and running on https://hariomgola.github.io/notepad
+Project is up and running on https://hariomgola.github.io/notepad/
 
 ## Project Status
   - Completed
