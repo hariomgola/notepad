@@ -1,8 +1,15 @@
 <!-- Header Conatiner -->
 <ng-container>
   <div class="header">
-    <h6 class="heading">Notes Application</h6>
-    <ng-container>
+    <h6>Notes Application</h6>
+    <div>
+      <label>Session Storage</label>
+      <div class="input-checkbox">
+        <input type="checkbox" [(ngModel)]="storageType" />
+      </div>
+      <label>Local Storage</label>
+    </div>
+    <!-- <div>
       <label>Text Size</label
       ><input
         class="range-input"
@@ -12,9 +19,11 @@
         max="20"
         [(ngModel)]="textSizeProperty"
         (input)="changeTextSize($event)"
-    /></ng-container>
-    <a class="header-button" (click)="openProjectCode()">{{ sourceCode }}</a>
-    <a class="header-button" (click)="openPortfolioCode()">{{ dev }}</a>
+      />
+    </div> -->
+    <div>
+      <a class="button-dev" (click)="openPortfolioCode()">{{ dev }}</a>
+    </div>
   </div>
 </ng-container>
 <!-- Text Box Area Container -->
@@ -25,6 +34,8 @@
     placeholder="Write Here..."
     (input)="textAreaInput($event)"
     wrap="hard"
+    spellcheck="false"
+    rows="50"
     >{{ inputValue }}</textarea
   >
 </ng-container>
