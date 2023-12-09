@@ -1,16 +1,30 @@
+<!-- Header Conatiner -->
 <ng-container>
   <div class="header">
     <h6 class="heading">Notes Application</h6>
+    <ng-container>
+      <label>Text Size</label
+      ><input
+        class="range-input"
+        type="range"
+        class=""
+        min="10"
+        max="20"
+        [(ngModel)]="textSizeProperty"
+        (input)="changeTextSize($event)"
+    /></ng-container>
     <a class="header-button" (click)="openProjectCode()">{{ sourceCode }}</a>
-    <a class="header-button">{{'developer profile'}}</a>
+    <a class="header-button" (click)="openPortfolioCode()">{{ dev }}</a>
   </div>
 </ng-container>
+<!-- Text Box Area Container -->
 <ng-container>
   <textarea
+    [style]="{ 'font-size': textSizeProperty + 'px' }"
     class="notepad-textarea no-scroll"
     placeholder="Write Here..."
     (input)="textAreaInput($event)"
-    [rows]="textAreaRowsProperty"
+    wrap="hard"
     >{{ inputValue }}</textarea
   >
 </ng-container>

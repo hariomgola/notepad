@@ -7,12 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NoteInputComponent implements OnInit {
   @Input() inputValue = '';
-  textAreaRowsProperty: number;
-  previousValue: number;
-  sourceCode = 'View Source Code';
+  textSizeProperty = '0';
+  sourceCode: string;
+  dev: string;
   constructor() {
-    this.textAreaRowsProperty = 100;
-    this.previousValue = 0;
+    this.textSizeProperty = '13';
+    this.sourceCode = 'View Source Code';
+    this.dev = 'developer profile';
   }
   ngOnInit() {}
   textAreaInput(event: Event) {
@@ -20,15 +21,17 @@ export class NoteInputComponent implements OnInit {
       ? (<HTMLInputElement>event.target)?.value
       : '';
     const _scrollLength = (<HTMLInputElement>event.target).scrollHeight;
-    // code logic for the expension fo row in textArea
-    // const scrollBarRowLengthValue = _scrollLength - this.previousValue;
-    // if (scrollBarRowLengthValue == 15 || scrollBarRowLengthValue == 16) {
-    //   this.textAreaRowsProperty += 1;
-    // }
-    // this.previousValue = _scrollLength;
-    // this.inputValue = _inputData;
   }
   openProjectCode() {
     window.open('https://github.com/hariomgola/notepad', '_self');
+  }
+  openPortfolioCode() {
+    window.open('https://github.com/hariomgola', '_self');
+  }
+  changeTextSize(event: Event) {
+    const _textSizeValue = (<HTMLInputElement>event.target)?.value
+      ? (<HTMLInputElement>event.target)?.value
+      : 10;
+    this.textSizeProperty = `${_textSizeValue}`;
   }
 }
